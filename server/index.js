@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5555;
 const app = express();
 const jobRoutes = require("./routes/jobRoutes");
 
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+app.use(cors({ origin: process.env.CLIENT_URL || "*", credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
