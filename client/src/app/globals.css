@@ -1,0 +1,102 @@
+/* @font-face {
+  font-family: satoshi;
+  src: url("/public/fonts/Satoshi-Variable.ttf");
+} */
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('../fonts/Satoshi-Variable.woff') format('woff'),
+       url('../fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.satoshi {
+  font-family: 'Satoshi-Variable';
+}
+.sato {
+  font-family: Satoshi Variable;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21.6px;
+  letter-spacing: 0%;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+select option {
+  padding: 5px;
+  
+}
+
+.nav{
+  box-shadow: 0px 0px 20px #7F7F7F26;
+}
+.card{
+  box-shadow: 0px 0px 14px #7F7F7F26;
+
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#range-slider-ab {
+  height: 16px;
+  background: #4b4d61;
+}
+
+#range-slider-ab .range-slider__range {
+  background: black;
+}
+
+#range-slider-ab .range-slider__thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+
+#range-slider-gradient {
+  height: 3px;
+  border-radius: 12px;
+  background: #CCC2C2;
+}
+
+#range-slider-gradient .range-slider__thumb {
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  height: 12px;
+  width:12px;
+  background : white; 
+}
+
+/* #range-slider-gradient .range-slider__thumb[data-lower] {
+  background: #ffffff;
+}
+
+#range-slider-gradient .range-slider__thumb[data-upper] {
+  background: #ffffff;
+} */
+
+#range-slider-gradient .range-slider__range {
+  background: black
+}
