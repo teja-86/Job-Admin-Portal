@@ -26,12 +26,22 @@ const JobCard = ({ job }) => {
       </div>
       <div className="">
         <div className="bg-gradient-to-b from-[#FEFEFD] to-[#F1F1F1] shadow-sm p-2 w-fit border border-white rounded-xl">
-          <Image
+          {/* <Image
             src="/amazon.png"
             width="100"
             height="100"
             alt=""
             className="w-16 h-16"
+          /> */}
+          <Image src={
+            job.company.toLowerCase() === "amazon"
+              ? "/amazon.png"
+              : job.company.toLowerCase() === "swiggy"
+              ? "/swiggy.png"
+              : job.company.toLowerCase() === "tesla"
+              ? "/tesla.png"
+              : "/lpa.svg"
+          } width="100" height="100" alt="" className="w-16 h-16" loading="lazy"
           />
         </div>
         <div className="pt-5 pb-3 grid gap-2">
