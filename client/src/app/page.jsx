@@ -1,5 +1,7 @@
 "use client";
-import JobCard from "@/components/JobCard";
+import React from "react";
+// import JobCard from "@/components/JobCard";
+const JobCard = React.lazy(() => import("@/components/JobCard"));
 import Loader from "@/components/Loader";
 import { useGlobalContext } from "@/context/GlobaProvider";
 import { axiosInstance } from "@/utils/axiosInstance";
